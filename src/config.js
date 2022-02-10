@@ -2,7 +2,7 @@ const basePath = process.cwd();
 const { MODE } = require(`${basePath}/constants/blend_mode.js`);
 const { NETWORK } = require(`${basePath}/constants/network.js`);
 
-const network = NETWORK.eth;
+const network = NETWORK.sol;
 
 // General metadata for Ethereum
 const namePrefix = "Your Collection";
@@ -10,12 +10,12 @@ const description = "Remember to replace this description";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
-  symbol: "YC",
-  seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  symbol: "",
+  seller_fee_basis_points: 600, // Define how much % you want from secondary market sales 1000 = 10%
+  external_url: "",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "CD1RPDCnSaxFMbwX3x2ZWPUp4CnFuCzsq8yxkY3rx2vi",
       share: 100,
     },
   ],
@@ -24,15 +24,16 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 999,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Backgrounds" },
+      { name: "Ears" },
+      { name: "Body" },
+      { name: "Eyes" },
+      { name: "Pupils" },
+      { name: "Beek" },
+      { name: "Tummies" },
+      { name: "Chains" },
     ],
   },
 ];
@@ -42,8 +43,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 500,
+  height: 500,
   smoothing: false,
 };
 
@@ -68,7 +69,7 @@ const text = {
 };
 
 const pixelFormat = {
-  ratio: 2 / 128,
+  ratio: 1 / 128,
 };
 
 const background = {
@@ -85,8 +86,8 @@ const rarityDelimiter = "#";
 const uniqueDnaTorrance = 10000;
 
 const preview = {
-  thumbPerRow: 5,
-  thumbWidth: 50,
+  thumbPerRow: 111,
+  thumbWidth: 100,
   imageRatio: format.height / format.width,
   imageName: "preview.png",
 };
